@@ -1,2 +1,2 @@
-# sharepoint-upload
-Módulo de upload de arquivos para Sharepoint feito em Node.js
+# sharepoint-publish
+File publish to Sharepoint document libraries via command line
