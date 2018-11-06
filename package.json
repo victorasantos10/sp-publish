@@ -1,0 +1,30 @@
+{
+  "name": "sharepoint-publish",
+  "version": "1.0.0",
+  "description": "File publish to Sharepoint document libraries via command line",
+  "main": "sharepoint-publish-module.js",
+  "dependencies": {
+    "spsave": "^3.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorasantos10/sharepoint-publish.git"
+  },
+  "keywords": [
+    "sharepoint",
+    "publish",
+    "file",
+    "document",
+    "library"
+  ],
+  "author": "Victor Alencar dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorasantos10/sharepoint-publish/issues"
+  },
+  "homepage": "https://github.com/victorasantos10/sharepoint-publish#readme"
+}

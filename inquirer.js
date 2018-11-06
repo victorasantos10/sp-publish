@@ -7,31 +7,31 @@ module.exports = {
             {
                 name: 'username',
                 type: 'input',
-                message: 'Insira o usuário do Sharepoint (sem o domínio)',
+                message: 'Insert the Sharepoint user (without domain)',
                 validate: function (value) {
                     if (value.length) {
                         return true;
                     } else {
-                        return 'Por favor, insira o usuário do Sharepoint (sem o domínio)';
+                        return 'Por favor, insert the Sharepoint user (without domain)';
                     }
                 }
             },
             {
                 name: 'password',
                 type: 'password',
-                message: 'Insira a senha',
+                message: 'Insert the password',
                 validate: function (value) {
                     if (value.length) {
                         return true;
                     } else {
-                        return 'Por favor, insira a senha.';
+                        return 'Please, insert the password.';
                     }
                 }
             },
             {
                 name: 'domain',
                 type: 'input',
-                message: 'Insira o domínio:'
+                message: 'Insert the domain:'
             }
         ];
         return inquirer.prompt(questions);
