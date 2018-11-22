@@ -1,0 +1,18 @@
+{
+  "environments": {
+    "environmentname": {
+      "coreOpts": {
+        "siteUrl": "http://yoursiteurl.com/sites/examplesite",
+        "checkin": true,
+        "checkinType": 1
+      },
+      "fileOpts": {
+        "folder": "Pages/folder",
+        "glob": [
+          "dist/**/*.*"
+        ],
+        "base": "dist"
+      }
+    }
+  }
+}
