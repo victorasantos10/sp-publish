@@ -7,10 +7,16 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Postinstall",
+      "program": "${workspaceFolder}/create-config.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Launch Program",
       "program": "${workspaceFolder}\\sharepoint-publish-module.js",
       "args": [
-        "--folder c:\\a"
+        "dev"
       ]
     }
   ]

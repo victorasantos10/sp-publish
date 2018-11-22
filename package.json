@@ -4,11 +4,13 @@
   "description": "File publish to Sharepoint document libraries via command line",
   "main": "sharepoint-publish-module.js",
   "dependencies": {
+    "find-up": "^3.0.0",
     "spsave": "^3.1.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./create-config.js"
   },
   "repository": {
     "type": "git",

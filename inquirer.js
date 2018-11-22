@@ -12,7 +12,7 @@ module.exports = {
                     if (value.length) {
                         return true;
                     } else {
-                        return 'Por favor, insert the Sharepoint user (without domain)';
+                        return 'Please, insert the Sharepoint user (without domain)';
                     }
                 }
             },
