@@ -1,9 +1,13 @@
 {
   "name": "sharepoint-publish",
   "version": "1.0.0",
+  "bin": {
+    "sp-publish": "./bin/demo-global.js"
+  },
   "description": "File publish to Sharepoint document libraries via command line",
   "main": "sharepoint-publish-module.js",
   "dependencies": {
+    "app-root-path": "^2.1.0",
     "find-up": "^3.0.0",
     "spsave": "^3.1.5"
   },

@@ -7,7 +7,7 @@ const path = require("path");
 
 var args = process.argv.slice(2);
 
-(async () => {
+const main = (async () => {
 
     const credentials = await inquirer.askSharepointCredentials();
 
@@ -32,7 +32,7 @@ var args = process.argv.slice(2);
         .then(function(data) {
             var dateNow = new Date();
             var dateString = util.format('[%s:%s:%s]', ('0' + dateNow.getHours()).slice(-2), ('0' + dateNow.getMinutes()).slice(-2), ('0' + dateNow.getSeconds()).slice(-2));
-            console.log(dateString + " The files were successfully uploaded.");
+            console.log(dateString + " The files were successfully published.");
         })
         .catch(function(err) {
             errorHandler();
@@ -47,3 +47,5 @@ function errorHandler(errorMessageParam) {
     console.log(dateString + " Library " + environment.fileOpts.folder);
     console.log(dateString + " Error message: " + err.message);
 }
+
+exports.main = main;

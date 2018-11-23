@@ -1,5 +1,5 @@
 {
-  "environments": {
+"environments": {
     "environmentname": {
       "coreOpts": {
         "siteUrl": "http://yoursiteurl.com/sites/examplesite",
