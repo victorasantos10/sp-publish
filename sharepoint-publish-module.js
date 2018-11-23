@@ -8,24 +8,31 @@ const path = require("path");
 var args = process.argv.slice(2);
 
 const main = (async () => {
-
+    const CONFIG_FILE_NAME = 'sp-publish-config.json';
     const credentials = await inquirer.askSharepointCredentials();
+
+    const pathFound = await findUp(CONFIG_FILE_NAME);
+
+    if(!pathFound){
+        errorHandler("File " + CONFIG_FILE_NAME + " not found. \
+        It should be in the root of your project.");
+    }
 
     if (!args || !args.length)
     errorHandler("Parameters not found. You need to call 'sp-publish --<environment-name>' \
-                 where <environment-name> should be a name which matches sp-publish-config.json's \
+                 where <environment-name> should be a name which matches " + CONFIG_FILE_NAME + "'s \
                  environment key.");
 
-    var jsonContent = fs.readFileSync(path.resolve(__dirname, "sp-publish-config.json") , "utf8")
+    var jsonContent = fs.readFileSync(path.resolve(pathFound, CONFIG_FILE_NAME) , "utf8")
     if (!jsonContent)
-        errorHandler("Error reading sp-publish-config.json file. \
+        errorHandler("Error reading " + CONFIG_FILE_NAME + " sp-publish-config.json file. \
                       It should be in the root of your project.");
 
     var parsed = JSON.parse(jsonContent);
     var environment = Object.keys(parsed.environments).filter(value => value === args[0].replace(/-/g, ""));
 
     if (!environment)
-        errorHandler("Environment doesn't match sp-publish-config.json environments");
+        errorHandler("Environment doesn't match " + CONFIG_FILE_NAME + " environments");
 
     environment = parsed.environments[environment];
     spsave(environment.coreOpts, credentials, environment.fileOpts)
