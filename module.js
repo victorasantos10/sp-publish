@@ -36,14 +36,19 @@ function promptFinished(err, result) {
         password: result.password
     }
 
-    const pathFound = findUp.sync(CONFIG_FILE_NAME);
+    const pathFound = findUp(CONFIG_FILE_NAME);
 
     if (!pathFound) {
         errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project. Refer to https://github.com/victorasantos10/sp-publish to info about correct JSON file format.");
     }
 
-    const jsonContent = fs.readFileSync(pathFound, "utf8");
-    if (!jsonContent)
+    readFile(pathFound, "utf8", readFileCallback);
+
+}
+
+function readFileCallback(err, jsonContent){
+
+    if (err)
         errorHandler("Error reading " + CONFIG_FILE_NAME + " file. Check if the file exists and if it's in the correct format.");
 
     const parsed = JSON.parse(jsonContent);
