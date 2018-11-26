@@ -42,7 +42,7 @@ function promptFinished(err, result) {
         errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project. Refer to https://github.com/victorasantos10/sp-publish to info about correct JSON file format.");
     }
 
-    readFile(pathFound, "utf8", readFileCallback);
+    fs.readFile(pathFound, "utf8", readFileCallback);
 
 }
 
