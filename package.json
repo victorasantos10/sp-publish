@@ -2,19 +2,20 @@
   "name": "sharepoint-publish",
   "version": "1.0.0",
   "bin": {
-    "sp-publish": "./bin/demo-global.js"
+    "sp-publish": "./bin/index.js"
   },
   "description": "File publish to Sharepoint document libraries via command line",
-  "main": "sharepoint-publish-module.js",
+  "main": "module.js",
   "dependencies": {
     "app-root-path": "^2.1.0",
+    "chalk": "^2.4.1",
     "find-up": "^3.0.0",
+    "prompt": "^1.0.0",
     "spsave": "^3.1.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node ./create-config.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
