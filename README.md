@@ -13,24 +13,25 @@ You will need to create a sp-publish-config.json file in your project, which nee
 #### Configuration sample
 
 ```json
-    {
-      "environments": {
-        "your_environment_name": {
-          "coreOpts": {
-            "siteUrl": "http://yoursiteurl.com/sites/examplesite",
-            "checkin": true,
-            "checkinType": 1
-          },
-          "fileOpts": {
-            "folder": "Pages/folder",
-            "glob": [
-              "dist/**/*.*"
-            ],
-            "base": "dist"
-          }
-        }
+{
+  "environments": {
+    "your_environment_name": {
+      "coreOpts": {
+        "siteUrl": "http://yoursiteurl.com/sites/examplesite",
+        "checkin": true,
+        "checkinType": 1
+      },
+      "fileOpts": {
+        "folder": "Pages/folder",
+        "glob": [
+          "dist/**/*.*"
+        ],
+        "base": "dist"
       }
-```}
+    }
+  }
+}
+```
 
 #### Usage
     sp-publish --<environment_name>
