@@ -8,7 +8,7 @@ You will need to create a `sp-publish-config.json` file in your project, which n
 
 #### Install
 
-The package needs to be installed **globally**, in order to run the `sp-publish` command from any project.
+The package needs to be installed **globally**, in order to run the `sp-publish` command.
 
     npm install -g sp-publish
 
