@@ -1,6 +1,6 @@
 {
   "name": "sp-publish",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "sp-publish": "./bin/index.js"
   },
