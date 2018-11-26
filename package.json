@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victorasantos10/sharepoint-publish.git"
+    "url": "git+https://github.com/victorasantos10/sp-publish.git"
   },
   "keywords": [
     "sharepoint",
@@ -31,7 +31,7 @@
   "author": "Victor Alencar dos Santos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/victorasantos10/sharepoint-publish/issues"
+    "url": "https://github.com/victorasantos10/sp-publish/issues"
   },
-  "homepage": "https://github.com/victorasantos10/sharepoint-publish#readme"
+  "homepage": "https://github.com/victorasantos10/sp-publish#readme"
 }

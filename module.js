@@ -23,7 +23,7 @@ module.exports = (async () => {
 
         const pathFound = findUp.sync(CONFIG_FILE_NAME);
         if (!pathFound) {
-            errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project. Refer to https://github.com/victorasantos10/sharepoint-publish to info about correct JSON file format.");
+            errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project. Refer to https://github.com/victorasantos10/sp-publish to info about correct JSON file format.");
         }
 
         if (!args || !args.length)
