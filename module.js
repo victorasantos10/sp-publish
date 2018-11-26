@@ -23,15 +23,15 @@ module.exports = (async () => {
 
         const pathFound = findUp.sync(CONFIG_FILE_NAME);
         if (!pathFound) {
-            errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project.");
+            errorHandler("File " + CONFIG_FILE_NAME + " not found. It should be in the root of your project. Refer to https://github.com/victorasantos10/sharepoint-publish to info about correct JSON file format.");
         }
 
         if (!args || !args.length)
-            errorHandler("Parameter not found. You need to call 'sp-publish --<environment-name>' " + os.EOL + " where <environment-name> should be a name which matches " + CONFIG_FILE_NAME + "'s " + os.EOL + chalk.blue("environment") + " key.");
+            errorHandler("Parameter not found. You need to call 'sp-publish --<environment-name>' where <environment-name> should be a name which matches " + CONFIG_FILE_NAME + "'s " + chalk.blue("environment") + " key.");
 
         const jsonContent = fs.readFileSync(pathFound, "utf8")
         if (!jsonContent)
-            errorHandler("Error reading " + CONFIG_FILE_NAME + " sp-publish-config.json file. " + os.EOL + "It should be in the root of your project.");
+            errorHandler("Error reading " + CONFIG_FILE_NAME + " file. Check if the file exists and if it's in the correct format.");
 
         const parsed = JSON.parse(jsonContent);
         var environment = Object.keys(parsed.environments).filter(value => value === args[0].replace(/-/g, ""));
