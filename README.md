@@ -14,6 +14,8 @@ The package needs to be installed **globally**, in order to run the `sp-publish`
 
 #### Configuration sample
 
+This example is also available in `sp-publish-config-example.json`
+
 ```json
 {
   "environments": {
