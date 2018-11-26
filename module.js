@@ -2,10 +2,8 @@ const spsave = require('spsave').spsave;
 const util = require("util");
 const findUp = require("find-up")
 const fs = require("fs");
-const os = require("os");
 const prompt = require("prompt");
 const schema = require("./schema");
-const path = require("path");
 const chalk = require('chalk');
 
 var args = process.argv.slice(2);
