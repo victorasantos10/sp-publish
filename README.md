@@ -12,7 +12,7 @@ You will need to create a sp-publish-config.json file in your project, which nee
 
 #### Configuration sample
 
-````json
+```json
     {
       "environments": {
         "your_environment_name": {
