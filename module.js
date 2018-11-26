@@ -54,8 +54,8 @@ module.exports = (async () => {
 })();
 
 function errorHandler(errorMessageParam) {
-  var errorMessage = errorMessageParam || "Error on file upload to library";
+    var errorMessage = errorMessageParam || "Error on file upload to library";
     var dateNow = new Date();
     var dateString = util.format('[%s:%s:%s]', ('0' + dateNow.getHours()).slice(-2), ('0' + dateNow.getMinutes()).slice(-2), ('0' + dateNow.getSeconds()).slice(-2));
-    throw new Error(chalk.blue(dateString) + " " +  chalk.red(errorMessage));
+    throw new Error(chalk.blue(dateString) + " " + chalk.red(errorMessage));
 }
